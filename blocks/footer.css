@@ -1,0 +1,8 @@
+.footer__copyright {
+  justify-content: center;
+  display: flex;
+  font-family: "Poppins";
+  text-decoration: #212121;
+  font-weight: 400;
+  opacity: 70%;
+}
