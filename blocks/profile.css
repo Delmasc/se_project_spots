@@ -6,6 +6,7 @@
 
 .profile__avatar {
   margin-right: 20px;
+  border-radius: 10px;
 }
 
 .proflie__column {
@@ -27,4 +28,5 @@
 
 .profile__add-btn {
   margin-left: auto;
+  border-radius: 10px;
 }
