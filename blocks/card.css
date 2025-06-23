@@ -30,5 +30,8 @@
 @media screen and (max-width: 627px) {
   .card__image {
     height: 288px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 }

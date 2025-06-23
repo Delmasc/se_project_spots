@@ -1,21 +1,19 @@
 # Project 3: Spots
 
-### Overview  
+## Descrition
+At first, the project was challenging and a bit confusing. It felt like a big leap for me, and I had to rewatch the tutorial videos multiple times just to understand what I was doing. However, this process helped me improve my problem-solving skills. I also reached out to the tutors for help when I needed it. Honestly, I’m surprised I made it this far. I know I probably made a lot of mistakes, but I did my best to check my work carefully and learn from the experience.  
 
-* Intro  
-* Figma  
-* Images  
-  
-**Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+## Tech 
+
+HTML – Structure of web pages
+
+CSS – Styling the web pages
+
+## Deployment 
+
+This web page is deployed to Github Pages 
+
+- Deployment link :
+
+
+

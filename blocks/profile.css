@@ -44,16 +44,22 @@
   margin-top: auto;
   opacity: 70%;
   display: flex;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: fit-content;
+  padding: 0;
 }
 
 .profile__add-btn {
   margin-left: auto;
-  width: 149;
-  height: 52;
+  width: 149px;
+  height: 52px;
   border-radius: 8px;
-  gap: 8px;
   background-color: #212121;
-  text-decoration-color: #fcf5e5;
+  color: #fcf5e5;
+  padding: 5px 10px;
+  align-self: flex-end;
 }
 
 @media screen and (max-width: 627px) {
