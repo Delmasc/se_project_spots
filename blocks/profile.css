@@ -58,9 +58,9 @@
   border-radius: 8px;
   background-color: #212121;
   color: #fcf5e5;
+  cursor: pointer;
   padding: 5px 10px;
   align-self: flex-end;
-  cursor: pointer;
 }
 
 @media screen and (max-width: 627px) {
