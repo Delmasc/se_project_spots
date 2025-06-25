@@ -105,12 +105,12 @@
   .profile__name {
     font-size: 20px;
     margin: 0 0 6px;
-    max-width: 288px;
+    max-width: auto;
   }
 
   .profile__description {
     margin: 0 0 32px;
-    max-width: 288px;
+    max-width: auto;
   }
 
   .profile__column {
@@ -127,12 +127,15 @@
   }
 
   .profile__edit-btn {
-    margin: auto 0;
+    margin: 20px 0;
     font-family: "Poppins";
     font-weight: 500;
     line-height: 1;
-    display: flex;
     gap: 8px;
-    align-self: center;
+    display: flex;
+    align-self: flex-start;
+    display: flex;
+    width: auto;
+    margin: auto;
   }
 }
