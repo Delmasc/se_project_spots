@@ -51,12 +51,14 @@
   display: flex;
   border: none;
   background-color: transparent;
-  width: fit-content;
+  width: auto;
   padding: 0;
   font-family: "Poppins";
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
+  align-self: flex-start;
+  margin: 20px 0;
 }
 
 .profile__edit-btn:hover {
@@ -97,6 +99,7 @@
     margin: 0 0 12px;
     height: 88px;
     width: 88px;
+    align-items: center;
   }
 
   .profile__name {
@@ -124,10 +127,12 @@
   }
 
   .profile__edit-btn {
-    margin: 0;
-    align-self: center;
+    margin: auto 0;
     font-family: "Poppins";
     font-weight: 500;
     line-height: 1;
+    display: flex;
+    gap: 8px;
+    align-self: center;
   }
 }
