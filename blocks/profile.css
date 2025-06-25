@@ -109,5 +109,18 @@
 
   .profile__add-btn {
     margin: 0;
+    align-self: center;
+    font-family: "Poppins";
+    font-weight: 500;
+    line-height: 1;
+    gap: 8px;
+  }
+
+  .profile__edit-btn {
+    margin: 0;
+    align-self: center;
+    font-family: "Poppins";
+    font-weight: 500;
+    line-height: 1;
   }
 }
