@@ -4,6 +4,11 @@
   line-height: 1.2;
   font-size: 20px;
   color: #212121;
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 420px;
 }
 
 .card__image {
@@ -11,7 +16,7 @@
   width: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 .card__content {
