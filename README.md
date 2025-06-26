@@ -14,4 +14,6 @@ CSS – Styling the web pages
 
 This web page is deployed to Github Pages
 
-- Deployment link :  https://delmasc.github.io/se_project_spots/
+- Deployment link : https://delmasc.github.io/se_project_spots/
+
+- Video link : https://drive.google.com/file/d/14CzYEq7qARbj_z-0kMI8uRf-kiiAl0Go/view?usp=sharing
