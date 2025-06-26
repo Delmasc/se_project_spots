@@ -44,5 +44,10 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    max-width: 228px;
+  }
+
+  .card__title {
+    font-size: 12px;
   }
 }
