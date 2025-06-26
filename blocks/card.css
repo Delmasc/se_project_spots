@@ -38,16 +38,18 @@
   background-repeat: no-repeat;
 }
 
+.card__like-button:hover {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 627px) {
   .card__image {
     height: 288px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    max-width: 228px;
+    width: 288px;
   }
 
   .card__title {
-    font-size: 12px;
+    max-width: 250px;
+    font-size: 16px;
   }
 }
