@@ -13,6 +13,8 @@ const newPostBtn = document.querySelector(".profile__new-post-btn");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 
+//query select for the new-post form (ie: the form element inside the new-post modal)
+
 const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
 
@@ -41,5 +43,7 @@ function handleEditProfileSubmit(evt) {
   editProfileModal.classList.remove("modal_is-opened");
 }
 
+// when a user clicks the submit button inside the editProfileForm, we run the function handleEditProfileSubmit
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
-editDescriptionForm.addEventListener("submit", handleEditDescriptionSubmit);
+
+//set up an event listener on the new-post-form so that when you submit it, it logs what the user has typed into those form inputs
