@@ -13,11 +13,7 @@
   font-weight: 500;
   padding: 10px;
   opacity: 0;
-  transition: opacity 0.4s linear;
-}
-
-.modal:hover {
-  cursor: pointer;
+  transition: visibility 0.4s, opacity 0.4s;
 }
 
 .modal_is-opened {
@@ -47,8 +43,10 @@
   background-image: url(../images/X.svg);
   border: none;
   background-color: transparent;
-  border-radius: 8px;
-  padding: 16px 12px;
+}
+
+.modal__close-btn:hover {
+  cursor: pointer;
 }
 
 .modal__title {
@@ -77,14 +75,9 @@
   width: 100%;
   color: #212121;
   border-radius: 8px;
-  opacity: 40%;
   padding: 16px 12px;
   width: 100%;
   box-sizing: border-box;
-}
-
-.modal__input::placeholder {
-  color: #212121;
 }
 
 .modal__submit-btn {
@@ -95,6 +88,10 @@
   gap: 8px;
   border-radius: 8px;
   max-width: 156px;
+}
+
+.modal__submit-btn:hover {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 627px) {

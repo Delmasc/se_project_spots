@@ -63,7 +63,7 @@
 
 .profile__edit-btn:hover {
   cursor: pointer;
-  opacity: 70%;
+  opacity: 0%;
 }
 
 .profile__new-post-btn {
@@ -83,9 +83,9 @@
   border: none;
 }
 
-.profile__add-btn:hover {
+.profile__new-post-btn:hover {
   cursor: pointer;
-  opacity: 80%;
+  opacity: 30%;
 }
 
 @media screen and (max-width: 627px) {
