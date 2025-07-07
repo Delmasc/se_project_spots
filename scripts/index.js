@@ -23,8 +23,6 @@ newPostBtn.addEventListener("click", function () {
   newPostModal.classList.add("modal_is-opened");
 });
 
-//query select for the new-post form (ie: the form element inside the new-post modal)
-
 const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
 
