@@ -12,6 +12,16 @@ const editProfileDescriptionInput = editProfileModal.querySelector(
 const newPostBtn = document.querySelector(".profile__new-post-btn");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
+const newCaptionInput = document.querySelector(".card__title");
+const newPostForm = newPostModal.querySelector(".modal__form");
+const newPostImg = newPostModal.querySelector("#new-post-modal");
+
+const newCaptionEl = document.querySelector("#card-caption");
+const newPostImgEl = document.querySelector("#card-image-input");
+
+newPostBtn.addEventListener("click", function () {
+  newPostModal.classList.add("modal_is-opened");
+});
 
 //query select for the new-post form (ie: the form element inside the new-post modal)
 
@@ -43,7 +53,13 @@ function handleEditProfileSubmit(evt) {
   editProfileModal.classList.remove("modal_is-opened");
 }
 
-// when a user clicks the submit button inside the editProfileForm, we run the function handleEditProfileSubmit
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 
-//set up an event listener on the new-post-form so that when you submit it, it logs what the user has typed into those form inputs
+function handleNewPostSubmit(evt) {
+  evt.preventDefault();
+  console.log(newCaptionEl.value);
+  console.log(newPostImgEl.value);
+  newPostModal.classList.remove("modal_is-opened");
+}
+
+newPostForm.addEventListener("submit", handleNewPostSubmit);

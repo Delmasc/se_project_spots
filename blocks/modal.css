@@ -12,10 +12,17 @@
   font-family: "Poppins";
   font-weight: 500;
   padding: 10px;
+  opacity: 0;
+  transition: opacity 0.4s linear;
+}
+
+.modal:hover {
+  cursor: pointer;
 }
 
 .modal_is-opened {
   visibility: visible;
+  opacity: 1;
 }
 
 .modal__container {
