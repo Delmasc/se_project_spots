@@ -108,8 +108,14 @@ editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 
 function handleNewPostSubmit(evt) {
   evt.preventDefault();
-  console.log(newCaptionEl.value);
-  console.log(newPostImgEl.value);
+
+  const inputValues = {
+    name: newCaptionEl.value,
+    link: newPostImgEl.value,
+  };
+
+  const cardElement = getCardElement(inputValues);
+  cardsList.prepend(cardElement);
   closeModal(newPostModal);
   newPostForm.reset();
 }
@@ -120,4 +126,3 @@ initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);
   cardsList.append(cardElement);
 });
-
