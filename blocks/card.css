@@ -1,3 +1,7 @@
+.card {
+  position: relative;
+}
+
 .card__title {
   font-family: "Poppins";
   font-weight: 500;
@@ -24,6 +28,24 @@
   align-items: center;
   justify-content: space-between;
   margin: 12px 0 0;
+}
+
+.card__delete-button {
+  width: 32px;
+  height: 32px;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  position: absolute;
+  background-color: transparent;
+  background-image: url(../images/Delete.SVG.svg);
+  border-radius: 16px;
+}
+
+.card__delete-button:hover {
+  cursor: pointer;
+  opacity: 1;
+  background-image: url(../images/Delete-Hover.SVG.svg);
 }
 
 .card__like-button {
