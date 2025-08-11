@@ -42,8 +42,9 @@
   display: flex;
   position: absolute;
   background-color: transparent;
-  background-image: url(../images/Delete.SVG.svg);
+  background-image: url(../images/Trash-Bin.SVG.svg);
   border-radius: 16px;
+  border-style: none;
 }
 
 .card__delete-button:hover {
@@ -72,6 +73,7 @@
 .card__like-button:hover {
   cursor: pointer;
   opacity: 1;
+  background-image: url(../images/Like-Heart.SVG.svg);
 }
 
 .card__like-button_active:hover {
@@ -89,3 +91,5 @@
     font-size: 16px;
   }
 }
+
+
