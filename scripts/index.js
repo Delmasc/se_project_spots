@@ -44,6 +44,7 @@ const newPostBtn = document.querySelector(".profile__new-post-btn");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 const newPostForm = newPostModal.querySelector(".modal__form");
+const newPostSubmitBtn = newPostModal.querySelector(".modal__button");
 
 const previewModal = document.querySelector("#preview-modal");
 const previewModalCloseBtn = previewModal.querySelector(".modal__close-btn");
@@ -88,6 +89,7 @@ function getCardElement(data) {
 }
 
 function openModal(modal) {
+
   modal.classList.add("modal_is-opened");
 }
 function closeModal(modal) {
@@ -139,6 +141,7 @@ function handleNewPostSubmit(evt) {
   cardsList.prepend(cardElement);
   closeModal(newPostModal);
   newPostForm.reset();
+  disableButton(newPostSubmitBtn);
 }
 
 newPostForm.addEventListener("submit", handleNewPostSubmit);

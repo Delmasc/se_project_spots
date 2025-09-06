@@ -31,20 +31,23 @@ const hasInvaildInput = (inputList) => {
 const toggleButtonState = (inputList, buttonEl) => {
   if (hasInvaildInput(inputList)) {
     buttonEl.disabled = true;
-    // Add a modifier class to the buttonEl to make it grey
-    // dont forget the CSS
+    disableButton(buttonEl);
   } else {
     buttonEl.disabled = false;
-    // remove the diabled class
+    // remove the disabled class
   }
+};
+
+const disableButton = (buttonEl) => {
+  // Add a modifier class to the buttonEl to make it grey
+  // dont forget the CSS
 };
 
 setEventListeners = (formElement) => {
   const inputList = Array.from(formElement.querySelectorAll(".modal__input"));
   const buttonElement = formElement.querySelector(".modal__submit-btn");
 
-  // ToDo  handle initial states
-  // toggleButtonState(inputList, buttonElement);
+  toggleButtonState(inputList, buttonElement);
 
   inputList.forEach((inputElement) => {
     inputElement.addEventListener("input", function () {
