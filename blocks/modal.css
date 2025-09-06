@@ -103,16 +103,23 @@
   opacity: 0.4;
 }
 
+.modal__input_type_error {
+  border: 1px solid rgba(255, 0, 0, 0.6);
+}
+
 .modal__input:hover {
   cursor: pointer;
   opacity: 1;
 }
 
 .modal__error {
-  color: red;
+  color: #ff0000;
+  opacity: 70%;
   margin-top: 8px;
   display: block;
-  /* ToDo correct color and font sizes */
+  width: 630px;
+  height: 18px;
+  line-height: 110.00000000000001%;
 }
 
 .modal__submit-btn {
