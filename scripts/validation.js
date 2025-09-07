@@ -40,7 +40,7 @@ const hasInvaildInput = (inputList) => {
 const toggleButtonState = (inputList, buttonEl) => {
   if (hasInvaildInput(inputList)) {
     buttonEl.disabled = true;
-    disableButton(buttonEl);
+    disableButton(buttonEl, config);
   } else {
     buttonEl.disabled = false;
     // remove the disabled class
