@@ -37,19 +37,19 @@ const hasInvaildInput = (inputList) => {
   });
 };
 
-const toggleButtonState = (inputList, buttonEl) => {
+const toggleButtonState = (inputList, buttonEl, config) => {
   if (hasInvaildInput(inputList)) {
     buttonEl.disabled = true;
     disableButton(buttonEl, config);
   } else {
     buttonEl.disabled = false;
-    // remove the disabled class
+    buttonEl.classList.remove(config.inactiveButtonClass);
   }
 };
 
 const disableButton = (buttonEl, config) => {
-  // Add a modifier class to the buttonEl to make it grey
-  // dont forget the CSS
+  buttonEl.classList.add(config.inactiveButtonClass);
+  buttonEl.disabled = true;
 };
 
 setEventListeners = (formElement, config) => {
@@ -67,6 +67,19 @@ setEventListeners = (formElement, config) => {
     });
   });
 };
+
+function resetValidation(formElement, config) {
+  const inputList = Array.from(
+    formElement.querySelectorAll(config.inputSelector)
+  );
+  const buttonElement = formElement.querySelector(config.submitButtonSelector);
+
+  inputList.forEach((inputElement) => {
+    hideInputError(formElement, inputElement); // clear error message + styles
+  });
+
+  toggleButtonState(inputList, buttonElement, config); // reset button state
+}
 
 const enableValidation = (config) => {
   const formList = Array.from(document.querySelectorAll(config.formSelector));
