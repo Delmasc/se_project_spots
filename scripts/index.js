@@ -57,6 +57,14 @@ const newPostImgEl = document.querySelector("#card-image-input");
 const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
 
+const allModals = [editProfileModal, newPostModal, previewModal];
+
+allModals.forEach((modal) => {
+  modal.addEventListener("mousedown", handleOverlayClose);
+});
+
+document.addEventListener("keydown", handleEscapeClose);
+
 function getCardElement(data) {
   const cardElement = cardTemplate.content
     .querySelector(".card")
@@ -150,3 +158,19 @@ initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);
   cardsList.append(cardElement);
 });
+
+// Close modal if Escape key is pressed
+function handleEscapeClose(evt) {
+  if (evt.key === "Escape") {
+    const openedModal = document.querySelector(".modal_is-opened");
+    if (openedModal) {
+      openedModal.classList.remove("modal_is-opened");
+    }
+  }
+}
+
+function handleOverlayClose(evt) {
+  if (evt.target.classList.contains("modal")) {
+    evt.target.classList.remove("modal_is-opened");
+  }
+}
