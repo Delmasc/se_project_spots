@@ -200,4 +200,15 @@
   .modal__submit-btn {
     max-width: unset;
   }
+
+  .modal__error {
+    color: #ff0000;
+    font-size: 16px;
+    opacity: 70%;
+    margin-top: 8px;
+    display: block;
+    line-height: 110.00000000000001%;
+    width: fit-content;
+    height: fit-content;
+  }
 }
