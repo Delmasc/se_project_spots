@@ -1,3 +1,11 @@
+import "./index.css";
+import {
+  enableValidation,
+  settings,
+  resetValidation,
+  disableButton,
+} from "../scripts/validation.js";
+
 const initialCards = [
   {
     name: "Golden Gate Bridge",
@@ -174,3 +182,5 @@ function handleOverlayClose(evt) {
     evt.target.classList.remove("modal_is-opened");
   }
 }
+
+enableValidation(settings);
