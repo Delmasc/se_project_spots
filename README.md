@@ -19,5 +19,6 @@ This web page is deployed to Github Pages
 - Video link : https://drive.google.com/file/d/1eFbKF2p5COvVKOGMEaAjM4blHRgdWxBb/view?usp=sharing
 
 Thank you for all the help / thanks for not giving up on me
-Spots Stage 10: Webpack
-part 10 images
+start part 5 / 5:05
+
+res.json());
