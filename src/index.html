@@ -154,5 +154,28 @@
         <p id="modal-caption" class="modal__caption"></p>
       </div>
     </div>
+
+    <div class="modal" id="avatar-modal">
+      <div class="modal__container">
+        <button type="button" class="modal__close-btn"></button>
+        <h2 class="modal__title">Edit profile avatar</h2>
+        <form class="modal__form" id="edit-avatar-modal">
+          <label for="profile-avatar-input" class="modal__label">
+            Profile Picture
+            <input
+              required
+              minlength="2"
+              maxlength="100"
+              id="profile-avatar-input"
+              type="url"
+              class="modal__input"
+              placeholder="Paste a link to the picture"
+            />
+            <span id="profile-avatar-input-error" class="modal__error"></span>
+          </label>
+          <button type="submit" class="modal__submit-btn">Save</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

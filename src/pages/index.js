@@ -61,9 +61,10 @@ api
     profileAvatar.src = user.avatar;
   })
   .catch(console.error);
-  
+
 const profileAvatar = document.querySelector(".profile__avatar");
 const editProfileBtn = document.querySelector(".profile__edit-btn");
+const avatarModalBtn = document.querySelector(".profile__avatar-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
 const editProfileForm = editProfileModal.querySelector(".modal__form");
@@ -79,6 +80,16 @@ const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 const newPostForm = newPostModal.querySelector(".modal__form");
 const newPostSubmitBtn = newPostModal.querySelector(".modal__submit-btn");
+
+// avatar form element
+const avatarModal = document.querySelector("#avatar-modal");
+const editAvatarModal = document.querySelector("#edit-avatar-modal");
+const avatarForm = avatarModal.querySelector(".modal__form");
+
+const avatarModalEl = [...avatarModal.querySelectorAll(".modal__input")];
+const avatarCloseBtn = avatarModal.querySelector(".modal__close-btn");
+const avatarSubmitBtn = avatarModal.querySelector(".modal__submit-btn");
+const avatarInput = document.querySelector("#profile-avatar-input");
 
 const previewModal = document.querySelector("#preview-modal");
 const previewModalCloseBtn = previewModal.querySelector(".modal__close-btn");
@@ -140,6 +151,10 @@ newPostBtn.addEventListener("click", function () {
   openModal(newPostModal);
 });
 
+avatarModalBtn.addEventListener("click", function () {
+  openModal(avatarModal);
+});
+
 const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
 
@@ -160,6 +175,10 @@ previewModalCloseBtn.addEventListener("click", function () {
 
 newPostCloseBtn.addEventListener("click", function () {
   closeModal(newPostModal);
+});
+
+avatarCloseBtn.addEventListener("click", function () {
+  closeModal(avatarModal);
 });
 
 function handleEditProfileSubmit(evt) {
@@ -195,7 +214,29 @@ function handleNewPostSubmit(evt) {
   disableButton(newPostSubmitBtn, settings);
 }
 
+// finish avatar submission handler
+function handleAvatarSubmit(evt) {
+  evt.preventDefault();
+  const formValues = {};
+  avatarModalEl.forEach((input) => (formValues[input.name] = input.value));
+  api
+    .editUserInfo(formValues)
+    .then((response) => {
+      console.log("User info updated successfully:", response);
+    })
+    .catch((error) => {
+      console.error("Error updating user info:", error);
+    });
+
+  console.log(formValues);
+}
+
+// also select the avatar
+// select the avatar modal btn top of the page
+
 newPostForm.addEventListener("submit", handleNewPostSubmit);
+
+avatarForm.addEventListener("submit", handleAvatarSubmit);
 
 // Close modal if Escape key is pressed
 function handleEscapeClose(evt) {

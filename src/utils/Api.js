@@ -1,5 +1,5 @@
 class Api {
-  constructor({ baseUrl, headers, avatars }) {
+  constructor({ baseUrl, headers, avatar }) {
     this._baseUrl = baseUrl;
 
     this._headers = headers;
@@ -13,6 +13,16 @@ class Api {
   getUserInfo() {
     return fetch(`${this._baseUrl}/users/me`, {
       headers: this._headers,
+    }).then(this.checkResponds);
+  }
+
+  editAvatarInfo({avatar}) {
+    return fetch(`${this._baseUrl}/users/me/avatar`, {
+      method: "PATCH",
+      headers: this._headers,
+      body: JSON.stringify({
+        avatar,
+      })
     }).then(this.checkResponds);
   }
 

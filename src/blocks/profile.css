@@ -4,12 +4,24 @@
   border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
 }
 
-profile__avatar-container {
+.profile__avatar-container {
   position: relative;
 }
 
 .profile__avatar-btn {
   position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  visibility: hidden;
+  /* to do finsh avatar button styles*/
+}
+
+.profile__avatar-container:hover .profile__avatar-btn {
+  visibility: visible;
 }
 
 .profile__avatar-btn::after {
@@ -107,6 +119,16 @@ profile__avatar-container {
     align-items: center;
     text-align: center;
     padding-top: 20px;
+  }
+
+  .profile__avatar-btn {
+    visibility: visible;
+  }
+
+  /* to do finsh avatar button styles*/
+
+  .profile__avatar-btn::after {
+    content: "";
   }
 
   .profile__avatar {
