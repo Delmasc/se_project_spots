@@ -138,10 +138,23 @@
   padding: 18px 32px;
 }
 
+.modal__cancel-btn:hover {
+  opacity: 1;
+  cursor: pointer;
+  background-color: #212121;
+  color: #fff;
+}
+
 .modal__delete-btn {
   background-color: #ff6565;
   border-radius: 8px;
   padding: 18px 32px;
+}
+
+.modal__delete-btn:hover {
+  opacity: 1;
+  cursor: pointer;
+  background-color: #ff3333;
 }
 
 .modal__submit-btn {
