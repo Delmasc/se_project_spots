@@ -95,7 +95,7 @@ const deleteCardsModal = document.querySelector("#delete-modal");
 const deleteForm = deleteCardsModal.querySelector("#delete-modal");
 const deleteCardBtn = deleteCardsModal.querySelector(".modal__submit-btn");
 const cancelButton = deleteCardsModal.querySelector("#cancel-btn");
-const closeButton = deleteCardsModal.querySelector(".modal__close-btn");
+const deleteModalCloseBtn = deleteCardsModal.querySelector(".modal__close-btn");
 
 const avatarModalEl = [...avatarModal.querySelectorAll(".modal__input")];
 const avatarCloseBtn = avatarModal.querySelector(".modal__close-btn");
@@ -146,9 +146,12 @@ function getCardElement(data) {
     const isLiked = cardLikeBtnEl.classList.contains(
       "card__like-button_active"
     );
-    api.toggleLikeCard(data._id, isLiked).then((res) => {
-      cardLikeBtnEl.classList.toggle("card__like-button_active");
-    });
+    api
+      .toggleLikeCard(data._id, isLiked)
+      .then((res) => {
+        cardLikeBtnEl.classList.toggle("card__like-button_active");
+      })
+      .catch(console.error);
   });
 
   const cardDeleteBtnEl = cardElement.querySelector(".card__delete-button");
@@ -172,10 +175,15 @@ function getCardElement(data) {
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", handleEscapeClose);
+  modal.addEventListener("click", handleOverlayClose);
 }
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", handleEscapeClose);
+  modal.removeEventListener("click", handleOverlayClose);
 }
+
 newPostBtn.addEventListener("click", function () {
   openModal(newPostModal);
 });
@@ -202,7 +210,7 @@ cancelButton.addEventListener("click", function () {
   closeModal(deleteCardsModal);
 });
 
-closeButton.addEventListener("click", function () {
+deleteModalCloseBtn.addEventListener("click", function () {
   closeModal(deleteCardsModal);
 });
 
@@ -264,7 +272,6 @@ function handleAvatarSubmit(evt) {
   evt.preventDefault();
 
   // Get the avatar URL from the input
-  const avatarInput = avatarModal.querySelector("#profile-avatar-input");
   const avatarUrl = avatarInput.value.trim();
 
   // Call API to update avatar
@@ -319,14 +326,14 @@ function handleEscapeClose(evt) {
   if (evt.key === "Escape") {
     const openedModal = document.querySelector(".modal_is-opened");
     if (openedModal) {
-      openedModal.classList.remove("modal_is-opened");
+      closeModal(openedModal);
     }
   }
 }
 
 function handleOverlayClose(evt) {
   if (evt.target.classList.contains("modal")) {
-    evt.target.classList.remove("modal_is-opened");
+    closeModal(evt.target);
   }
 }
 

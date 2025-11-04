@@ -32,3 +32,5 @@ Video Pitch : https://drive.google.com/file/d/1zTyjg_vsyPYsBL4WuHrlUIMxqYePpKCa/
 i tried im not good at speaking on video
 
 <!-- token : 32af2716-338e-40fc-8417-8681ed7efb23 -->
+
+pull request : https://github.com/Delmasc/se_project_spots/pull/2
