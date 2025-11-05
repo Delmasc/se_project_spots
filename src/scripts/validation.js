@@ -79,7 +79,7 @@ export const resetValidation = (formElement, config) => {
   });
 
   toggleButtonState(inputList, buttonElement, config); // reset button state
-}
+};
 
 export const enableValidation = (config) => {
   const formList = Array.from(document.querySelectorAll(config.formSelector));
