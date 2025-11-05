@@ -120,12 +120,6 @@ const allModals = [
   deleteCardsModal,
 ];
 
-allModals.forEach((modal) => {
-  modal.addEventListener("mousedown", handleOverlayClose);
-});
-
-document.addEventListener("keydown", handleEscapeClose);
-
 function getCardElement(data) {
   const cardElement = cardTemplate.content
     .querySelector(".card")
